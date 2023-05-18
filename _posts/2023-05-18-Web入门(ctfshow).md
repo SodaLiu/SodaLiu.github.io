@@ -26,9 +26,9 @@ F12打开开发者工具查看，也可以使用 ctrl + u 查看网页源代码�
 
 ![image-20230518162321752](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230518162321752.png)
 
-我们看看是什么情况，搜索著名博主ouluhumen的博客
+我们看看是什么情况，搜索著名博主ouluhumen的博客☞☞
 
-[]: https://ouluhumen.github.io/2023/04/30/Ctfshow-Web%E5%85%A5%E9%97%A81-20%E9%A2%98/
+[ouluhumen]: https://ouluhumen.github.io/2023/04/30/Ctfshow-Web%E5%85%A5%E9%97%A81-20%E9%A2%98/
 
 ![image-20230518162404797](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230518162404797.png)
 
