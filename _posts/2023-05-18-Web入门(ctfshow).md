@@ -16,9 +16,7 @@ typora-copy-images-to: ./
 
 F12打开开发者工具查看，也可以使用 ctrl + u 查看网页源代码。
 
-![](屏幕截图 2023-05-17 224949.png)
-
-![](屏幕截图 2023-05-17 225008-1684396694242-14.png)
+![image-20230518161306727](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230518161306727.png)
 
 ## web2
 
