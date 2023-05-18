@@ -4,7 +4,7 @@ title:      Web入门（ctfshow）
 subtitle:   起点
 date:       2023-5-18
 author:     Rainsblue.chan
-header-img: img/web入门/3.png
+header-img: ![3](../../../wallpaper/3.jpg)
 catalog:   true
 tags:
     - Web
