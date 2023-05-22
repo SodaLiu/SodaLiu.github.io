@@ -102,6 +102,8 @@ phps源码泄露是什么，先看主页，输入index.php
 
 [Diresearch 默认字典位置与自定义字典使用方法](https://blog.csdn.net/qq_46145027/article/details/122174063)
 
+[【渗透神器】信息收集-目录爆破Dirsearch篇](https://zhuanlan.zhihu.com/p/483702332)
+
 ![image-20230522143442495](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522143442495.png)
 
 一下子就出来了，大概3秒。这里**-w**就是指定字典路径。
