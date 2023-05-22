@@ -78,6 +78,26 @@ phps源码泄露是什么，先看主页，输入index.php
 
 看到有一个方法是dirsearch（很久以前大概自己弄过，专门用来扫漏洞的），也可以确定这个名字，也有以flag，login为开头的，这里记一下。
 
+#### dirsearch.py
+
+如果你的windows上装了git或者cygwin，你就可以像我这样安装，当然直接下载一个py文件然后cmd里用也是一样的。
+
+`git clone https://github.com/maurosoria/dirsearch`
+
+![image-20230522135250649](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522135250649.png)
+
+这一篇把下载可能会遇到的问题说了，这是链接👉👉[dirsearch安装问题](https://blog.csdn.net/wuxinweii/article/details/126914934)
+
+`pip install -r requirements.txt -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com`（这一串是问题核心，下面是一个示例）
+
+![image-20230522141555559](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522141555559.png)
+
+
+
+## web6
+
+![image-20230522134306246](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522134306246.png)
+
 
 
 
