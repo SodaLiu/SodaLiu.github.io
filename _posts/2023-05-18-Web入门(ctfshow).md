@@ -184,6 +184,36 @@ svn的也贴贴
 
 ## web9
 
+![image-20230522224126893](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522224126893.png)
+
+![image-20230522224415836](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522224415836.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522224525501.png" alt="image-20230522224525501" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522224608292.png" alt="image-20230522224608292" style="zoom:50%;" />
+
+来分析一下原因，这里我直接跟着b站教程走的，利用wsl的ubuntu
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522225052912.png" alt="image-20230522225052912" style="zoom:67%;" />
+
+现在我要把当中aaa改成一个aba，未保存直接关闭。
+
+​                                        <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522225153134.png" alt="image-20230522225153134" style="zoom:80%;" /> 
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522225352334.png" alt="image-20230522225352334" style="zoom: 33%;" />
+
+重新打开，1.php还在，使用ls -al查看所有文件
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522225947658.png" alt="image-20230522225947658" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522230121322.png" alt="image-20230522230121322" style="zoom:50%;" />
+
+.1.php.swp为交换文件，是在vim非正常退出的情况下产生的，它会存储在atp服务器里面，作为一个非解析内容作为二进制下载，这种情况下我们可能能拿到它的源码。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522230852158.png" alt="image-20230522230852158" style="zoom: 33%;" />
+
+
+
 
 
 
