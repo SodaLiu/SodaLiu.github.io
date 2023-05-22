@@ -74,11 +74,11 @@ phps源码泄露是什么，先看主页，输入index.php
 
 *文件就是php的源代码文件,通常用于提供给用户(访问者)查看php代码,因为用户无法直接通过Web浏览器看到php文件的内容,所以需要用phps文件代替。*
 
-<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522133817668.png" alt="image-20230522133817668" style="zoom: 67%;" />
-
 看到有一个方法是dirsearch（很久以前大概自己弄过，专门用来扫漏洞的），也可以确定这个名字，也有以flag，login为开头的，这里记一下。
 
 #### dirsearch.py
+
+这个刚刚看见的，归结的感觉很多了👉[web信息泄露相关内容](https://www.cnblogs.com/wysngblogs/p/15940304.html)
 
 如果你的windows上装了git或者cygwin，你就可以像我这样安装，当然直接下载一个py文件然后cmd里用也是一样的。
 
@@ -92,7 +92,19 @@ phps源码泄露是什么，先看主页，输入index.php
 
 ![image-20230522141555559](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522141555559.png)
 
+看看使用dirsearch后会产生什么影响。
 
+![image-20230522141904206](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522141904206.png)
+
+整个跑也能找，但是太太太慢了，可以考虑对应的做字典，时间会省不少
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522133817668.png" alt="image-20230522133817668" style="zoom: 67%;" />
+
+[Diresearch 默认字典位置与自定义字典使用方法](https://blog.csdn.net/qq_46145027/article/details/122174063)
+
+![image-20230522143442495](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522143442495.png)
+
+一下子就出来了，大概3秒。这里**-w**就是指定字典路径。
 
 ## web6
 
