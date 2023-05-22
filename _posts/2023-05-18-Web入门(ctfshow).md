@@ -112,6 +112,26 @@ phps源码泄露是什么，先看主页，输入index.php
 
 ![image-20230522134306246](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522134306246.png)
 
+url后输入www.zip，即可下载源码压缩包
+
+![image-20230522145814644](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522145814644.png)
+
+![image-20230522145859807](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522145859807.png)
+
+解压包里两个文件，一个是php，一个就是flag文件
+
+![image-20230522145930786](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522145930786.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522150129830.png" alt="image-20230522150129830" style="zoom:67%;" />
+
+![image-20230522150351756](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522150351756.png)
+
+这当中两者flag不同的原因是解压的文件是之前www服务器中的，在这个靶场重新构建时会重新写入，所以输入url出现的flag是对的
+
+## web7
+
+
+
 
 
 
