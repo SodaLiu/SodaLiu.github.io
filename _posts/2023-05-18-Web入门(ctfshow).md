@@ -220,9 +220,33 @@ svn的也贴贴
 
 ![image-20230522231448939](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522231448939.png)
 
-![image-20230522231641090](image-20230522231641090.png)
+![image-20230522231641090](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522231641090.png)
 
-## web11
+## web11（域名失效）
+
+## web12
+
+![image-20230522231959279](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522231959279.png)
+
+![image-20230522232524689](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522232524689.png)
+
+用我的字典扫出来一个robots.txt，disallow一个admin，我们输入进去看看
+
+![image-20230522232741704](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522232741704.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522232852118.png" alt="image-20230522232852118" style="zoom:50%;" />
+
+密码在网站最下面，用户名为root
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522233005889.png" alt="image-20230522233005889" style="zoom:50%;" />
+
+![image-20230522233053731](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522233053731.png)
+
+## web13
+
+
+
+
 
 
 
