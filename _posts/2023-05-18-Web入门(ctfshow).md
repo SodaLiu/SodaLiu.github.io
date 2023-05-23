@@ -310,6 +310,28 @@ web浏览器目录一般都在/var/www底下的html
 
 ![image-20230523230154560](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523230154560.png)
 
+## web16
+
+![image-20230523230427144](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523230427144.png)
+
+先看看概念喵~~~~
+
+![image-20230523230536808](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523230536808.png)
+
+*探针的主要用途是帮助开发人员了解服务器的配置和运行环境，以便他们能够更好地调试和优化应用程序。探针可以提供有关 PHP 版本、扩展模块、配置选项、请求信息、环境变量等信息。 ---from ouluhumen*
+
+使用tz.php打开看看。
+
+![image-20230523230932992](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523230932992.png)
+
+*phpinfo 函数会生成一个包含了 PHP 配置信息的 HTML 页面，其中包含了 PHP 版本、编译选项、加载的扩展模块、环境变量、请求信息等等。通过查看 phpinfo 页面，你可以了解 PHP 的配置和运行环境的详细信息，帮助你诊断和解决 PHP 应用程序的问题 --from ouluhumen*
+
+![image-20230523231340399](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523231340399.png)
+
+
+
+
+
 
 
 
