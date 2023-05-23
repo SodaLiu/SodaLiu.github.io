@@ -398,6 +398,20 @@ ctrl+u看一下源代码，看一下js
 
 ## web20
 
+![image-20230524002010393](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524002010393.png)
+
+被脱裤了（？）通过/db/db.mdb下载文件，使用notepad得到答案
+
+![image-20230524003220067](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524003220067.png)
+
+![image-20230524003330039](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524003330039.png)
+
+至此信息泄露到此
+
+## web21
+
+
+
 
 
 
