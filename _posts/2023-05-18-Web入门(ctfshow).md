@@ -244,7 +244,29 @@ svn的也贴贴
 
 ## web13
 
+![image-20230522233332617](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522233332617.png)
 
+文档 = document
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522233704700.png" alt="image-20230522233704700" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522233756257.png" alt="image-20230522233756257" style="zoom:50%;" />
+
+![image-20230522233813414](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522233813414.png)
+
+## web14
+
+![image-20230522233900989](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522233900989.png)
+
+嗅觉敏锐，ctrl+u ctrl+f editor
+
+![image-20230522234202458](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522234202458.png)
+
+编辑器漏洞利用，文件上传，这是一个漏洞攻击的考量方式。
+
+web浏览器目录一般都在/var/www底下
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522234858839.png" alt="image-20230522234858839" style="zoom:50%;" />
 
 
 
