@@ -372,7 +372,27 @@ ctrl+u看一下源代码，看一下js
 
 ## web19
 
+![image-20230523235833211](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523235833211.png)
 
+这个下面是注释，是用户和密码。
+
+![image-20230523235928306](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523235928306.png)
+
+![image-20230524000047880](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524000047880.png)
+
+大意了
+
+![image-20230524000242136](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524000242136.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524000444610.png" alt="image-20230524000444610" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524000535099.png" alt="image-20230524000535099" style="zoom:50%;" />
+
+好叭！得结合一下题目，这里用到的是AES。iv为初始向量，选择CBC模式
+
+![image-20230524001301828](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524001301828.png)
+
+![image-20230524001139955](image-20230524001139955.png)
 
 
 
