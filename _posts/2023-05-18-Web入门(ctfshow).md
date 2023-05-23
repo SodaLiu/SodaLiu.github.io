@@ -302,6 +302,14 @@ web浏览器目录一般都在/var/www底下的html
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/3bc0cd43199cd43307ca84dcb8dfdb6.jpg" alt="3bc0cd43199cd43307ca84dcb8dfdb6" style="zoom:50%;" />
 
+![image-20230523225747714](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523225747714.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523225832834.png" alt="image-20230523225832834" style="zoom:50%;" />
+
+犯傻了，上面用户名是admin，因为是后台登录（汗）😂😂😂
+
+![image-20230523230154560](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523230154560.png)
+
 
 
 
