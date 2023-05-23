@@ -346,7 +346,27 @@ backup.sql是存备份文件的地方，url后输入即可下载
 
 ## web18
 
+![image-20230523233753920](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523233753920.png)
 
+超你马的比😊😊😊😊😊
+
+ctrl+u看一下源代码，看一下js
+
+![image-20230523234150215](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523234150215.png)
+
+![image-20230523234303470](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523234303470.png)
+
+下面那条放我全新的hackbar里，
+
+![image-20230523234801119](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523234801119.png)
+
+![image-20230523235050351](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523235050351.png)
+
+使用unicode解码得出一个网址，110.php
+
+![image-20230523235130814](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523235130814.png)
+
+![image-20230523234122327](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523234122327.png)
 
 
 
