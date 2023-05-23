@@ -356,7 +356,9 @@ ctrl+u看一下源代码，看一下js
 
 ![image-20230523234303470](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523234303470.png)
 
-下面那条放我全新的hackbar里，
+下面那条放我全新的hackbar里，应该是unicode编码，所以可以使用alert方式，这里另种
+
+![image-20230523235352088](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523235352088.png)
 
 ![image-20230523234801119](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523234801119.png)
 
