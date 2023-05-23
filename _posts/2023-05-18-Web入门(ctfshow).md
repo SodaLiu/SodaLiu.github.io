@@ -264,9 +264,59 @@ svn的也贴贴
 
 编辑器漏洞利用，文件上传，这是一个漏洞攻击的考量方式。
 
-web浏览器目录一般都在/var/www底下
+web浏览器目录一般都在/var/www底下的html
 
-<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230522234858839.png" alt="image-20230522234858839" style="zoom:50%;" />
+![image-20230523222526445](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523222526445.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523222621874.png" alt="image-20230523222621874" style="zoom: 33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523223029368.png" alt="image-20230523223029368" style="zoom:33%;" />
+
+![image-20230523223102006](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523223102006.png)
+
+那个nothing here有点“此地无银三百两”的滋味了。
+
+![image-20230523223342357](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523223342357.png)
+
+![image-20230523223423555](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523223423555.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523223713020.png" alt="image-20230523223713020" style="zoom:50%;" />
+
+估计是了，放在url下看看。
+
+![image-20230523223826852](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523223826852.png)
+
+错误原因是使用了绝对路径。由最开始找到editor那里的路径，从根目录往后试试相对路径，也就是nothinghere那里。结果正确。
+
+![image-20230523223949445](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523223949445.png)
+
+## web15
+
+![image-20230523224145585](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523224145585.png)
+
+网页底部找到一个邮箱，我是要找这个qq号吗？
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523224554802.png" alt="image-20230523224554802" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523225058255.png" alt="image-20230523225058255" style="zoom: 33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/3bc0cd43199cd43307ca84dcb8dfdb6.jpg" alt="3bc0cd43199cd43307ca84dcb8dfdb6" style="zoom:50%;" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
