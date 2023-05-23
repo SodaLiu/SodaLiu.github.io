@@ -12,7 +12,7 @@ typora-copy-images-to: ./
 ---
 # 前言
 基于ctfshow的web入门所做的整理，希望能够学到一些皮毛。
-## web1
+## web1（信息泄露篇）
 
 F12打开开发者工具查看，也可以使用 ctrl + u 查看网页源代码。
 
@@ -408,7 +408,11 @@ ctrl+u看一下源代码，看一下js
 
 至此信息泄露到此
 
-## web21
+## web21（爆破篇）
+
+![image-20230524003504591](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524003504591.png)
+
+
 
 
 
