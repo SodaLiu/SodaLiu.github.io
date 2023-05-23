@@ -326,7 +326,25 @@ web浏览器目录一般都在/var/www底下的html
 
 *phpinfo 函数会生成一个包含了 PHP 配置信息的 HTML 页面，其中包含了 PHP 版本、编译选项、加载的扩展模块、环境变量、请求信息等等。通过查看 phpinfo 页面，你可以了解 PHP 的配置和运行环境的详细信息，帮助你诊断和解决 PHP 应用程序的问题 --from ouluhumen*
 
+点击phpinfo跳入，或者url后输入act=phpinfo
+
+![image-20230523232148678](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523232148678.png)
+
 ![image-20230523231340399](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523231340399.png)
+
+## web17
+
+![image-20230523232336819](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523232336819.png)
+
+backup.sql是存备份文件的地方，url后输入即可下载
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523233325611.png" alt="image-20230523233325611" style="zoom:50%;" />
+
+看看我的workbench里，找到了。
+
+![image-20230523233451882](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230523233451882.png)
+
+## web18
 
 
 
