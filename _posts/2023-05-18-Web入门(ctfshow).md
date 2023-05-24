@@ -438,7 +438,27 @@ Basic base64编码（username：password）
 
 ![image-20230524150424116](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524150424116.png)
 
-哈哈，just kidding，但是他确实是这样的。而对于Bearer鉴权，凭证则是犹如OAuth服务器颁发的一个token，就是访问令牌，格式为**Bearer access_token**，这里token就是持有人身份认证。
+哈哈，just kidding，但是他确实是这样的。而对于Bearer鉴权，凭证则是犹如OAuth服务器颁发的一个token，就是访问令牌，格式为**Bearer access_token**，这里token就是持有人身份认证。可以复制proxy到Intruder，也可以用ctrl+i
+
+![image-20230524151518574](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524151518574.png)
+
+![image-20230524151322461](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524151322461.png)
+
+在最后的==后点击Add$按钮，我们选择字典爆破，点击payloads
+
+![image-20230524151653499](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524151653499.png)
+
+![image-20230524151810786](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524151810786.png)
+
+![image-20230524151949874](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524151949874.png)
+
+![image-20230524152028188](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524152028188.png)
+
+
+
+
+
+
 
 
 
