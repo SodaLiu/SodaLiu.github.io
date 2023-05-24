@@ -422,6 +422,24 @@ ctrl+u看一下源代码，看一下js
 
 [这一篇文章可以看看，点击食用，讲的是OAuth框架](https://zhuanlan.zhihu.com/p/409073486)
 
+看最下面的Authorization，这个字段放的是**鉴权信息**，主要包括两部分：
+
+1.鉴权类型
+
+最主要的鉴权方式是Basic和Bearer，表示使用的基本身份认证或持有人身份认证
+
+Basic base64编码（username：password）
+
+**eg.Authorization: Basic YWRtaW46ZnVjaw==**
+
+![image-20230524123818983](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524123818983.png)
+
+![image-20230524145803977](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524145803977.png)
+
+![image-20230524150424116](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524150424116.png)
+
+哈哈，just kidding，但是他确实是这样的。而对于Bearer鉴权，凭证则是犹如OAuth服务器颁发的一个token，就是访问令牌，格式为**Bearer access_token**，这里token就是持有人身份认证。
+
 
 
 
