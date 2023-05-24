@@ -446,13 +446,39 @@ Basic base64编码（username：password）
 
 在最后的==后点击Add$按钮，我们选择字典爆破，点击payloads
 
-![image-20230524151653499](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524151653499.png)
+![image-20230524152653607](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524152653607.png)
 
 ![image-20230524151810786](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524151810786.png)
+
+我们要爆破的是密码，选择的是前缀为**admin：**，然后已知的是它是Authorization里的一部分，所以是经过Base64加密的，这里选择的时候可以写一下。
 
 ![image-20230524151949874](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524151949874.png)
 
 ![image-20230524152028188](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524152028188.png)
+
+这里符号不需要加密，否则爆不出来力（悲）
+
+![image-20230524152208121](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524152208121.png)
+
+![image-20230524153447831](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524153447831.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524154547080.png" alt="image-20230524154547080" style="zoom:50%;" />
+
+爆破！😊😊😊😊😊
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524153613169.png" alt="image-20230524153613169" style="zoom:50%;" />
+
+![image-20230524153649601](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230524153649601.png)
+
+这个我楞了一下，ok就好了，这个免费版还是能用的，我打算搞一手破解版，有哥们跟我说那个速度快。
+
+
+
+
+
+
+
+
 
 
 
