@@ -538,11 +538,59 @@ Basic base64编码（username：password）
 
 ## web24
 
+![image-20230525214449582](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525214449582.png)
+
+拿到题目我们能看见两段。我们分为A、B段来分别分析。
+
+A段为php代码。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525214712315.png" alt="image-20230525214712315" style="zoom:50%;" />
+
+这是一段 PHP 代码，它包含一个名为 "flag.php" 的文件，并检查 GET 请求中是否存在名为 "r" 的参数。如果存在，它将变量 "$r" 的值设置为 "r" 参数的值，使用 "mt_srand()" 函数生成一个随机数，并使用 "intval()" 检查 "$r" 的值是否等于生成的随机数。如果两个值相等，则输出flag。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525223839665.png" alt="image-20230525223839665" style="zoom: 33%;" />
+
+如果 GET 请求中不存在 "r" 参数，则使用 "highlight_file()" 函数突出显示当前文件的源代码，并使用 "system('cat /proc/version')" 命令打印出 Linux 内核版本的输出。
+
+"cat /proc/version" 命令显示服务器上正在运行的 Linux 内核版本的信息。这些信息对攻击者来说可能很有用，可以用于寻找系统的漏洞。
+
+值得注意的是，"error_reporting(0)" 函数用于关闭错误报告，这可能会使在出现问题时调试代码变得更加困难。
+
+B段就是else分支下打印出的Linux内核版本的输出。
+
+![image-20230525221233659](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525221233659.png)
+
+我的第一个想法当然还是最简单的爆破，毕竟不用动脑子，还有就是利用php写个脚本跑跑，我先试试第一种。
+
+![image-20230525225055507](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525225055507.png)
+
+![image-20230525225122808](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525225122808.png)
+
+![image-20230525225159694](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525225159694.png)
+
+完蛋，跑了一万个没结果，还是想想实际的...
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525225849301.png" alt="image-20230525225849301" style="zoom: 33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525230656870.png" alt="image-20230525230656870" style="zoom:50%;" />
+
+`mt_srand()` 函数返回的是布尔值，而不是生成的随机数。因此，在代码中，变量 `$i` 将被赋值为 `true` 或 `false`，而不是生成的随机数。可以这么说，mt_srand是随机数序列，种子相同，随机数序列生成也就相同。
+
+但是将这个数值放入后也没有成功，发现是php版本的问题，我使用的应该是18？这里用小皮面板调一下版本号，非常的方便，非常的新鲜。
+
 
 
 ## web25
 
+## web26
 
+## web27
+
+## web28
+
+## web29
+
+## web30
 
 
 
