@@ -480,9 +480,39 @@ Basic base64编码（username：password）
 
 ![image-20230525104825744](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525104825744.png)
 
+![image-20230525105106986](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525105106986.png)
+
+![image-20230525105235006](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525105235006.png)
+
+也可以，上面多打了一个v
+
+![image-20230525105907501](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525105907501.png)
+
 ## web22
 
+![image-20230525110006287](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525110006287.png)
 
+这个域名失效了，但是能在靶场网页上看见
+
+## web23
+
+![image-20230525110322218](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525110322218.png)
+
+是一段php代码
+
+![image-20230525110414296](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525110414296.png)
+
+![image-20230525110501476](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525110501476.png)
+
+这段代码是一段 PHP 代码，用于检查传递给它的 URL 参数 "token"。如果满足特定条件，则会输出一个叫做 $flag 的变量的值。
+
+代码中包含了一个叫做 "flag.php" 的文件，可能是存储了一些敏感信息的文件。
+
+在检查 "token" 参数时，它会将其进行 MD5 哈希处理，并检查哈希值的特定位置上的字符是否相等。如果相等，它会计算出这些特定位置上字符的总和并将其除以哈希值第一个字符的值。如果结果等于哈希值第 31 个字符的值，则代码会输出 $flag 的值。
+
+如果 "token" 参数不存在，代码将会输出自身的源代码。同时，它禁用了错误报告功能，这意味着任何错误都不会被显示出来，这使得攻击者更难以找到漏洞。
+
+**所以要做的就是制作出一个token参数，使得它的哈希满足上述规则**
 
 
 
