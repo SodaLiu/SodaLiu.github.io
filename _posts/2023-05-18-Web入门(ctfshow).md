@@ -512,7 +512,17 @@ Basic base64编码（username：password）
 
 如果 "token" 参数不存在，代码将会输出自身的源代码。同时，它禁用了错误报告功能，这意味着任何错误都不会被显示出来，这使得攻击者更难以找到漏洞。
 
-**所以要做的就是制作出一个token参数，使得它的哈希满足上述规则**
+**所以要做的就是制作出一个token令牌，使得它的哈希满足上述规则**
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525112830183.png" alt="image-20230525112830183" style="zoom:33%;" />
+
+![image-20230525122030020](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525122030020.png)
+
+直接扫也行，出来一个422和1202
+
+![image-20230525122401560](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525122401560.png)
+
+## web24
 
 
 
