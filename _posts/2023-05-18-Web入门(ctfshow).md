@@ -530,11 +530,15 @@ Basic base64编码（username：password）
 
 ![image-20230525122527098](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525122527098.png)
 
+#### 另外的思路（sublime+php）
+
+
+
 ## web24
 
 
 
-
+## web25
 
 
 
