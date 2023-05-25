@@ -10,7 +10,7 @@ tags:
     - Web
 typora-copy-images-to: ./
 ---
-# 前言
+## 前言
 基于ctfshow的web入门所做的整理，希望能够学到一些皮毛。
 ## web1（信息泄露篇）
 
