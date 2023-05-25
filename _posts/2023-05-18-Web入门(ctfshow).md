@@ -532,7 +532,9 @@ Basic base64编码（username：password）
 
 #### 另外的思路（sublime+php）
 
+![image-20230525172859821](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525172859821.png)
 
+*如果您在`echo`语句中使用`\n`时没有将其放在双引号中，PHP将不会将其解释为换行符，而是将其视为普通的文本。因此，如果您尝试使用`echo $i \n;`而不是`echo "$i \n";`，PHP会在尝试解析`\n`之前将其视为`$i`的一部分，这将导致语法错误。因此，为了在`echo`语句中使用特殊字符，您需要将它们放在双引号中。*
 
 ## web24
 
