@@ -498,7 +498,13 @@ Basic base64编码（username：password）
 
 ![image-20230525110322218](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525110322218.png)
 
-是一段php代码
+> 在 Web 开发中，`?token=` 是一种常见的 URL 参数格式，用于向服务器传递数据。当浏览器请求一个 URL 时，可以在 URL 后面添加一个问号 `?`，然后在问号后面添加参数，参数的格式为 `key=value`，多个参数之间使用 `&` 连接。
+>
+> 比如，一个包含token参数的url可能长这样
+>
+> eg.https://example.com/path/to/resource?token=abc123
+
+是一段php代码，所以这里的方式就是要传token的参。
 
 ![image-20230525110414296](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525110414296.png)
 
@@ -516,11 +522,13 @@ Basic base64编码（username：password）
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525112830183.png" alt="image-20230525112830183" style="zoom:33%;" />
 
+*只是一种方式，本人没有用这种方式实现，用比较蠢的又比较爽的*
+
 ![image-20230525122030020](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525122030020.png)
 
-直接扫也行，出来一个422和1202
+直接扫也行，出来一个422和1202，两个都是对的，哈哈😊😊😊![image-20230525122401560](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525122401560.png)
 
-![image-20230525122401560](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525122401560.png)
+![image-20230525122527098](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525122527098.png)
 
 ## web24
 
