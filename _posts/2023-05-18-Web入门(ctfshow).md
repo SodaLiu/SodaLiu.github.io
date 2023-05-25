@@ -576,7 +576,23 @@ B段就是else分支下打印出的Linux内核版本的输出。
 
 `mt_srand()` 函数返回的是布尔值，而不是生成的随机数。因此，在代码中，变量 `$i` 将被赋值为 `true` 或 `false`，而不是生成的随机数。可以这么说，mt_srand是随机数序列，种子相同，随机数序列生成也就相同。
 
-但是将这个数值放入后也没有成功，发现是php版本的问题，我使用的应该是18？这里用小皮面板调一下版本号，非常的方便，非常的新鲜。
+但是将这个数值放入后也没有成功，发现是php版本的问题，我使用的应该是7.3.4？这里用小皮面板调一下版本号，非常的方便，非常的新鲜。慢慢调，慢慢试。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525233240135.png" alt="image-20230525233240135" style="zoom:50%;" />
+
+php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的php版本。
+
+![image-20230525233350582](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525233350582.png)
+
+啊？怎么回事呢？我一开始找到的就是这个？怎么没进去？我本来一开始就赢了呜呜呜😢😢😢😢😢
+
+![image-20230525233849680](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525233849680.png)
+
+我现在气死了！！！啊！！！！！！我要！！报仇！查他的版本号！操他妈的！
+
+点击F12，查看网络模块，刷新一下网页，跳出来下面的包，查看包头，X-Powered-By就是版本，以后记住喵
+
+![image-20230525234214533](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525234214533.png)
 
 
 
