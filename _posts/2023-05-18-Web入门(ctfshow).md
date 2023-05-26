@@ -628,13 +628,31 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 ![image-20230526095553541](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526095553541.png)
 
+![image-20230526154400862](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526154400862.png)
+
 
 
 
 
 ## web26
 
+![image-20230526163228033](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526163228033.png)
+
+![image-20230526163616499](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526163616499.png)
+
+![image-20230526163721777](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526163721777.png)
+
+![image-20230526163828715](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526163828715.png)
+
+![image-20230526164417956](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526164417956.png)
+
+因为直接什么都不输也能连到数据库，所以抓包看回显也行
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526164810546.png" alt="image-20230526164810546" style="zoom:50%;" />
+
 ## web27
+
+
 
 ## web28
 
