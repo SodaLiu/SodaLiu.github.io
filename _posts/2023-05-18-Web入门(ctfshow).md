@@ -710,6 +710,24 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 ![image-20230526231928845](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526231928845.png)
 
+提示是index.php，剩下是在两个数字里爆破。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526234335765.png" alt="image-20230526234335765" style="zoom:50%;" />
+
+这里加一个index.php，作为主页输出
+
+![image-20230527001444247](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527001444247.png)
+
+要对两个变量进行爆破，也就是100x100的数量。选择Clusterbomb。
+
+![image-20230527000707440](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527000707440.png)
+
+这样就会出现两个包
+
+![image-20230527000821166](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527000821166.png)
+
+![image-20230527002335333](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527002335333.png)
+
 ## web29
 
 ## web30
@@ -727,6 +745,12 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 ![image-20230526194126517](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526194126517.png)
 
 ![image-20230526191742800](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526191742800.png)
+
+#### 传说之下（雾）
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527002503276.png" alt="image-20230527002503276" style="zoom:50%;" />
+
+
 
 
 
