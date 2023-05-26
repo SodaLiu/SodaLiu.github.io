@@ -700,6 +700,16 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 ## web28
 
+![image-20230526231150576](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526231150576.png)
+
+![image-20230526231517795](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526231517795.png)
+
+作为爆破篇的最后一题，这看着确实很怪，尤其是这个url...
+
+我老实说我真没看懂，我得去找找wp了。
+
+![image-20230526231928845](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526231928845.png)
+
 ## web29
 
 ## web30
