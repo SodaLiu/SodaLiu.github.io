@@ -590,11 +590,45 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 我现在气死了！！！啊！！！！！！我要！！报仇！查他的版本号！操他妈的！
 
-点击F12，查看网络模块，刷新一下网页或者**ctrl+R**跳出来下面的包，查看响应头，X-Powered-By或者Server就是版本，以后记住喵！
+点击F12，查看网络模块，刷新一下网页或者**ctrl+R**跳出来下面的包，查看响应头，X-Powered-By或者Server就是版本，显示为7.3.x（都是7.3的版本），以后记住喵！
 
 ![image-20230525234214533](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525234214533.png)
 
 ## web25
+
+![image-20230526084512674](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526084512674.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526084804942.png" alt="image-20230526084804942" style="zoom:50%;" />
+
+还是分析它看看。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526085335019.png" alt="image-20230526085335019" style="zoom:50%;" />
+
+这里我想随便先传一个r的参数，看会不会回显一个rand，结果是可以的。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526085451048.png" alt="image-20230526085451048" style="zoom:50%;" />
+
+一个负值，我直接加1试试。即**1999098941**。
+
+![image-20230526085829107](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526085829107.png)
+
+似乎又大了？接着调整几次范围。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526090355865.png" alt="image-20230526090355865" style="zoom:50%;" />
+
+![image-20230526090503948](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526090503948.png)
+
+941没有回显，非常奇怪！别的都有！下面这个能验证我的想法。
+
+![image-20230526090541245](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526090541245.png)
+
+![image-20230526090639930](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526090639930.png)
+
+下一步就是token，那么就是url处要多一个传参**&?token=**，这里我先爆一下，但是无果，找教程说还是要爆种子，有工具的。叫做**php_mt_seed**。
+
+
+
+
 
 ## web26
 
