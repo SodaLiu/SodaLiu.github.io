@@ -624,7 +624,9 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 ![image-20230526090639930](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526090639930.png)
 
-下一步就是token，那么就是url处要多一个传参**&?token=**，这里我先爆一下，但是无果，找教程说还是要爆种子，有工具的。叫做**php_mt_seed**。
+下一步就是token，那么就是url处要多一个传参**&?token=**，这里我先爆一下，但是无果，找教程说还是要爆种子，有工具的。叫做**php_mt_seed**。由于中间中断了一次，所以又是一个重新的随机，这里只是一个演示。
+
+![image-20230526095553541](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526095553541.png)
 
 
 
