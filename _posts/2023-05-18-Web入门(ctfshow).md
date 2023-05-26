@@ -640,7 +640,7 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 ![image-20230526163616499](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526163616499.png)
 
-![image-20230526163721777](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526163721777.png)
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526163721777.png" alt="image-20230526163721777" style="zoom:50%;" />
 
 ![image-20230526163828715](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526163828715.png)
 
@@ -667,6 +667,16 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 ## web29
 
 ## web30
+
+## 番外篇
+
+#### 爆破（polarctf）
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526185658706.png" alt="image-20230526185658706" style="zoom: 50%;" />
+
+![image-20230526185804379](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526185804379.png)
+
+天，那不是和那个差不多？传个pass的参数。
 
 
 
