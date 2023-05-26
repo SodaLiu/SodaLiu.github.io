@@ -750,6 +750,32 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527002503276.png" alt="image-20230527002503276" style="zoom:50%;" />
 
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527002801059.png" alt="image-20230527002801059" style="zoom:50%;" />
+
+哈哈，还真放的传说之下的音乐！
+
+不管怎么说我还是得看看源码有什么东西。写了个注释
+
+![image-20230527002913774](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527002913774.png)
+
+它的计分是通过javascript实现的，一般来说会放在game.js中，一看真有。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527003728003.png" alt="image-20230527003728003" style="zoom:50%;" />
+
+![image-20230527003331560](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527003331560.png)
+
+有没有办法让他的计分跳到2077呢？就把变量增大就行。
+
+看了一个方法是在比赛途中改变量的，这里试一下。真对的。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527004640736.png" alt="image-20230527004640736" style="zoom: 33%;" />
+
+控制台成功打出flag。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527004717676.png" alt="image-20230527004717676" style="zoom:50%;" />
+
+
+
 
 
 
