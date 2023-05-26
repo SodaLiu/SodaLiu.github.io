@@ -678,9 +678,9 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 天，那不是和那个差不多？传个pass的参数。
 
+![image-20230526194126517](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526194126517.png)
 
-
-
+![image-20230526191742800](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526191742800.png)
 
 
 
