@@ -766,13 +766,19 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 有没有办法让他的计分跳到2077呢？就把变量增大就行。
 
-看了一个方法是在比赛途中改变量的，这里试一下。真对的。
+看了一个方法是在比赛途中改变量的，这里试一下。真对的。点击👉👉[zsy](http://zhangshiyu.com/post/49546.html)
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527004640736.png" alt="image-20230527004640736" style="zoom: 33%;" />
 
 控制台成功打出flag。
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527004717676.png" alt="image-20230527004717676" style="zoom:50%;" />
+
+[CTFshow-菜狗杯-传说之下（雾）-easyPytHon_P](https://blog.csdn.net/qq_31415417/article/details/129069722)
+
+<img src="image-20230527005102834.png" alt="image-20230527005102834" style="zoom: 33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527005151599.png" alt="image-20230527005151599" style="zoom:33%;" />
 
 
 
