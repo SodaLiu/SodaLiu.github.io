@@ -672,7 +672,13 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526165324789.png" alt="image-20230526165324789" style="zoom: 50%;" />
 
+这当中有一些问题打断了我，详见我的博客[经验第六篇](https://rainsbluechan.github.io/2023/05/18/%E7%BB%8F%E9%AA%8C%E9%9B%86/)
 
+![image-20230526212916120](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526212916120.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526213305368.png" alt="image-20230526213305368" style="zoom:50%;" />
+
+有些晕。试了好几次，回显都因为这个弹出页面改成了get，所以我打算放到kali来做一下。
 
 
 
