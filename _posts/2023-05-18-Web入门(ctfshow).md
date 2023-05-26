@@ -652,6 +652,14 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 ## web27
 
+![image-20230526164911054](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526164911054.png)
+
+？？？？？
+
+![image-20230526165210740](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526165210740.png)
+
+![image-20230526165324789](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526165324789.png)
+
 
 
 ## web28
