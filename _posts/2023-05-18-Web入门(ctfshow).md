@@ -678,9 +678,25 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526213305368.png" alt="image-20230526213305368" style="zoom:50%;" />
 
-有些晕。试了好几次，回显都因为这个弹出页面改成了get，所以我打算放到kali来做一下。
+有些晕。试了好几次，回显都因为这个弹出页面改成了get，花了一些时间找，终于发现一个
 
+#### 小技巧（查看http history）
 
+![image-20230526225044278](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526225044278.png)
+
+![image-20230526225341699](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526225341699.png)
+
+找的是年月日，那么做一个对应的字典应该很方便。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526230023388.png" alt="image-20230526230023388" style="zoom: 33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526230258609.png" alt="image-20230526230258609" style="zoom: 50%;" />
+
+![image-20230526230720514](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526230720514.png)
+
+艰难
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526231030153.png" alt="image-20230526231030153" style="zoom:50%;" />
 
 ## web28
 
