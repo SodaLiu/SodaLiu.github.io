@@ -620,19 +620,31 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 941没有回显，非常奇怪！别的都有！下面这个能验证我的想法。
 
-![image-20230526090541245](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526090541245.png)
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526090541245.png" alt="image-20230526090541245" style="zoom:50%;" />
 
-![image-20230526090639930](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526090639930.png)
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526090639930.png" alt="image-20230526090639930" style="zoom:50%;" />
 
 下一步就是token，那么就是url处要多一个传参**&?token=**，这里我先爆一下，但是无果，找教程说还是要爆种子，有工具的。叫做**php_mt_seed**。由于中间中断了一次，所以又是一个重新的随机，这里只是一个演示。
 
-![image-20230526095553541](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526095553541.png)
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526095553541.png" alt="image-20230526095553541" style="zoom:50%;" />
 
-![image-20230526154400862](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526154400862.png)
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526154400862.png" alt="image-20230526154400862" style="zoom:50%;" />
 
+[PHP伪随机数漏洞，以及php_mt_seed脚本的使用](https://blog.csdn.net/qq_58784379/article/details/121715072)
 
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526205109586.png" alt="image-20230526205109586" style="zoom:50%;" />
 
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526205915250.png" alt="image-20230526205915250" style="zoom:50%;" />
 
+注意php版本，**7.3**
+
+![image-20230526210502114](image-20230526210502114.png)
+
+![image-20230526210607617](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526210607617.png)
+
+缩小范围，只有11和14满足了。试了一下11，直接成功。
+
+![image-20230526210715971](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230526210715971.png)
 
 ## web26
 
