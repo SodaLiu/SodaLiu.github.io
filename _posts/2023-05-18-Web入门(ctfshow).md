@@ -728,9 +728,23 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 ![image-20230527002335333](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527002335333.png)
 
-## web29
+## web29（命令执行篇）
+
+![image-20230527005845801](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527005845801.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527005940329.png" alt="image-20230527005940329" style="zoom: 50%;" />
+
+*这段代码是用PHP编写的，它包含一个条件语句，用于检查请求中是否设置了名为'c'的参数。如果设置了该参数，代码将把'c'参数的值赋给变量$c。然后，代码使用正则表达式检查$c变量的值中是否包含字符串"flag"（忽略大小写）。如果$c变量的值中不包含字符串"flag"，代码将使用eval()函数来执行$c变量的内容。*
+
+*在PHP中，eval()函数用于将一个字符串作为代码块来执行。这意味着，如果正则表达式检查没有检测到字符串"flag"，则$c变量中包含的任何有效的PHP代码都将被执行。然而，eval()函数的使用很危险，因为它允许任意代码执行，并且可能容易受到代码注入攻击的影响。*
+
+
 
 ## web30
+
+## web31
+
+## web32
 
 ## 番外篇
 
