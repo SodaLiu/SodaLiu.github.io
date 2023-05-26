@@ -590,7 +590,7 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 我现在气死了！！！啊！！！！！！我要！！报仇！查他的版本号！操他妈的！
 
-点击F12，查看网络模块，刷新一下网页，跳出来下面的包，查看包头，X-Powered-By就是版本，以后记住喵
+点击F12，查看网络模块，刷新一下网页或者**ctrl+R**跳出来下面的包，查看响应头，X-Powered-By或者Server就是版本，以后记住喵！
 
 ![image-20230525234214533](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230525234214533.png)
 
