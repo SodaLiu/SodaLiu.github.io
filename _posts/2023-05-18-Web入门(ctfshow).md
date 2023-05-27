@@ -796,6 +796,24 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527005151599.png" alt="image-20230527005151599" style="zoom:33%;" />
 
+#### Web签到（青少）
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527141515092.png" alt="image-20230527141515092" style="zoom:33%;" />
+
+![image-20230527141740440](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527141740440.png)
+
+光秃秃一个页面什么也没有，只能拿dirsearch扫描，找出来一个.bak文件，应该是备份文件。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527141617918.png" alt="image-20230527141617918" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527141545484.png" alt="image-20230527141545484" style="zoom:33%;" />
+
+![image-20230527141703930](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527141703930.png)
+
+qsnctf{53cbfb62-687d-4584-9462-574bd7d644da}正确
+
+#### 方便下一个博客的链接点
+
 
 
 
