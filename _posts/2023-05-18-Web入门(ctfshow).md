@@ -738,6 +738,16 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 *在PHP中，eval()函数用于将一个字符串作为代码块来执行。这意味着，如果正则表达式检查没有检测到字符串"flag"，则$c变量中包含的任何有效的PHP代码都将被执行。然而，eval()函数的使用很危险，因为它允许任意代码执行，并且可能容易受到代码注入攻击的影响。*
 
+这边直接来测试一个phpinfo()，看看能不能跳出php版本，结果是可以的。
+
+![image-20230527190157191](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527190157191.png)
+
+![image-20230527190322406](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527190322406.png)
+
+这样都行。哈哈。但是记住，**一定要有分号**，否则出不来。
+
+![image-20230527190437281](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527190437281.png)
+
 
 
 ## web30
