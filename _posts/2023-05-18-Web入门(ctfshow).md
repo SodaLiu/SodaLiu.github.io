@@ -886,7 +886,28 @@ curl 'http://destination/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh' -d 'echo;ls /'
 
 ![image-20230527161454122](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527161454122.png)
 
-## 帝国CMSo3（青少）
+## 帝国CMS（青少）
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527162021105.png" alt="image-20230527162021105" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527162306654.png" alt="image-20230527162306654" style="zoom:50%;" />
+
+软件显示为nginx，也有版本号，接下来我又没头绪了，开始dirsearch。先翻到了一个robots，看有什么爬的。
+
+![image-20230527162558629](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527162558629.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527162644520.png" alt="image-20230527162644520" style="zoom:50%;" />
+
+爆到/e/admin/进了后台，搜了一下帝国似乎后台就是这个地址。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527163902251.png" alt="image-20230527163902251" style="zoom: 33%;" />
+
+```
+这里我先在kali安装了一下dirsearch，如果遇到无法安装的问题请试试下列指令
+sudo apt-get update 更新一下，应该就好了
+```
+
+发现不太行，我最好还是从01开始做，到时候再说！先回ctfshow去喽！（溜）
 
 
 
