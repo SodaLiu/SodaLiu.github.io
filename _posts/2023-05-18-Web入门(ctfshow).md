@@ -746,6 +746,8 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 ## web32
 
+## 方便下一个博客的链接点
+
 ## 番外篇
 
 #### 爆破（polarctf）
@@ -811,6 +813,15 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 ![image-20230527141703930](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527141703930.png)
 
 qsnctf{53cbfb62-687d-4584-9462-574bd7d644da}正确
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527141957392.png" alt="image-20230527141957392" style="zoom:50%;" />
+
+```
+常见的备份文件后缀名有: .git .svn .swp .svn .~ .bak .bash_history
+PHP 的备份文件有两种，分别是*.php~和*.php.bak。  前面记得加/index
+```
+
+
 
 #### 方便下一个博客的链接点
 
