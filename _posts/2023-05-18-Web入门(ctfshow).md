@@ -748,13 +748,86 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 ![image-20230527190437281](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527190437281.png)
 
+![image-20230527212534058](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527212534058.png)
 
+执行system的ls，看目录。猜想最后cat一下就出来了，但是那个不对，或许可以用file_get_contents（），但是失败。得这样。
+
+![image-20230527212658733](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527212658733.png)
+
+![image-20230527214634716](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527214634716.png)
+
+执行后失败，因为有flag过滤，所以换成问号代替一下。这里复制文本内容，使得绕过原有的来查看。
+
+![image-20230527214745035](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527214745035.png)
+
+![image-20230527214823571](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527214823571.png)
+
+##### 小尝试
+
+![image-20230527215244489](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527215244489.png)
+
+![image-20230527215822882](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527215822882.png)
+
+最简单的绕过，直接cat
+
+![image-20230527215956631](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527215956631.png)
 
 ## web30
 
-## web31
+![image-20230527220049528](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527220049528.png)
 
-## web32
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527220107846.png" alt="image-20230527220107846" style="zoom:50%;" />
+
+这里直接禁止了system命令，还有php。得采用```  `的方式
+
+![image-20230527221522473](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527221522473.png)
+
+![image-20230527221600971](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527221600971.png)
+
+反引号，在php中等同于system，类似于shell执行。*php中有cp，但是没有ls，还得system*
+
+## web31---参数跳板
+
+![image-20230527221935797](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527221935797.png)
+
+![image-20230527221959443](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527221959443.png)
+
+```
+http://url/?c=eval($_GET[1]);&1=phpinfo(); //这里让他执行第一个参数
+在这个URL中，参数"c"的值为"eval($_GET[1]);"，其中"[1]"表示从GET请求中获取的第一个参数的值。而在请求中，第一个参数的值为"1"，它又为"phpinfo();"。因此，"eval($_GET[1]);"将被解析为"eval('phpinfo();');"，这将执行"phpinfo();"函数，并将PHP环境的信息输出到客户端。
+```
+
+![image-20230527222349995](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527222349995.png)
+
+这里做一个横向的对比。get2就是跟着2。
+
+![image-20230527222805402](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527222805402.png)
+
+这里ban掉的关键字就可以全部实现。注意：**php代码在得开源码才能看见**，也可以tacc
+
+![image-20230527223014229](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527223014229.png)
+
+![image-20230527223656224](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527223656224.png)
+
+这里其实使用到的就是一个跳板，可以无视任何正则。
+
+## web32---超级过滤
+
+![image-20230527224141322](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527224141322.png)
+
+![image-20230527224719949](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527224719949.png)
+
+ban掉了**反引号，逗号，括号，分号**。上面的跳板用不了了。
+
+可代替分号的是**>?**，然后使用include命令来包含一下。
+
+![image-20230527225239107](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527225239107.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527225449826.png" alt="image-20230527225449826" style="zoom: 33%;" />
+
+
+
+## web33
 
 ## 方便下一个博客的链接点
 
