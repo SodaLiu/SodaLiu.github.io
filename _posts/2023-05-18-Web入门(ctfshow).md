@@ -798,7 +798,7 @@ php7.09nts是这个，5.3.29也不对，我待会得想想如何得到网站的p
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527005151599.png" alt="image-20230527005151599" style="zoom:33%;" />
 
-#### Web签到（青少）
+#### 青少的复习题
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527141515092.png" alt="image-20230527141515092" style="zoom:33%;" />
 
@@ -820,6 +820,73 @@ qsnctf{53cbfb62-687d-4584-9462-574bd7d644da}正确
 常见的备份文件后缀名有: .git .svn .swp .svn .~ .bak .bash_history
 PHP 的备份文件有两种，分别是*.php~和*.php.bak。  前面记得加/index
 ```
+
+robots.txt复习点（青少）
+
+![image-20230527142532838](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527142532838.png)
+
+![image-20230527142648611](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527142648611.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527142748404.png" alt="image-20230527142748404" style="zoom:50%;" />
+
+网络--响应标头
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527143021573.png" alt="image-20230527143021573" style="zoom: 50%;" />
+
+## 登录后台（青少）
+
+这题非常有趣。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527153234508.png" alt="image-20230527153234508" style="zoom:67%;" />
+
+这里有一个细节，待会儿会谈到。看响应头，确定了是**apache服务器以及Unix系统**
+
+![image-20230527155406235](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527155406235.png)
+
+登录后仅有一个界面，于是我又开始dirsearch，发现了一个cgi-bin。**所以这里有一个自己的小经验，一旦没有什么头绪的时候，遇事不决dirsearch**
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527153337146.png" alt="image-20230527153337146" style="zoom: 33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527154027284.png" alt="image-20230527154027284" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527153612270.png" alt="image-20230527153612270" style="zoom:50%;" />
+
+我们需要绕过权限，去找bin/sh目录。
+
+![image-20230527154431808](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527154431808.png)
+
+还有这里有一个需要注意的细节吧，我们看到这个url是不是以 **/** 为结尾的？下面我指出一个需要注意的地方。
+
+```
+在Web应用程序中，这个斜杠字符 "/" 通常被用作目录的分隔符。如果一个URL以斜杠字符 "/" 结尾，表示它是一个目录的URL，而如果没有以斜杠字符 "/" 结尾，表示它是一个文件的URL。
+
+http://9accab72-e30d-4c49-be45-2ae16f6c6550.challenge.qsnctf.com:8081/cgi-bin/
+*表示为cgi-bin目录*
+
+http://9accab72-e30d-4c49-be45-2ae16f6c6550.challenge.qsnctf.com:8081/cgi-bin
+*表示为cgi-bin文件*
+```
+
+![image-20230527154942393](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527154942393.png)
+
+看看是不是不一样？这里是一个小细节吧。我们接下来需要绕过它，用到curl指令。
+
+还记得我们一开始看到的响应头吗？在Unix系统上，文件系统通常是基于树形结构的，以根目录“/”为起点，通过目录层次的嵌套来组织文件和目录。**如果Web应用程序在Unix系统上运行，那么它的文件通常也会存储在Unix系统的文件系统中。**我们要用curl来回到unix的根目录，这样就能绕过审查机制。这里使用到kali。
+
+```
+curl 'http://destination/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh' -d 'A=|echo;ls /'
+curl 'http://destination/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh' -d 'echo;ls /'
+（ps：没有A=|也行，但是一定要有echo，它的作用是在服务器上执行一个空命令，以确保在执行"ls /"命令之前，命令行处于一个干净的状态。）
+	这里使用了路径遍历漏洞，通过在URL中多次使用"/"和".%2e"，来访问文件系统中的上级目录，最终访问到了"/bin/sh"这个文件，它是一个Linux系统中的shell程序。
+	熟悉cd指令的朋友们应该知道'cd ..'是返回上级目录，这里的'%2e'就是代表着一个点的意思，那么在配合前面一个点就是两个点，返回上一级，这里反复用很多次就是为了回到根目录。为什么不用两个点，反而还要再用一个%2e呢？因为在url中, . 和 .. 都有特殊含义，这里是为了避免歧义，所以把 .. 拆成一个点带一个编码的点的形式来执行。
+	这里使用了"-d"参数，指定了一个POST请求的数据体，其中"A=|echo;ls /"是一个bash命令，用于执行两个子命令，以列出根目录"/"下的文件列表。具体来说，"A=|echo"是一个无意义的赋值操作，它将变量"A"赋值为一个竖杠字符"|"，然后使用echo命令将这个值输出到控制台。接着，";"是一个命令分隔符，用于分隔两个命令。最后的"ls /"是一个列出根目录"/"下文件列表的命令，它将根目录下的所有文件和目录列出来，并将结果返回给命令行输出。这里可以使用ls，但是不适合访问特定目录的详细信息，像这里的话使用了ls之后我就没看见flag（不是没有）。
+	curl 'http://destination/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh' -d 'echo;cat /flag'
+	执行"cat /flag"这个命令来输出"/flag"文件的内容，那么"/flag"应该是一个绝对路径，表示根目录下的"flag"文件。而执行"cat flag"命令会将"flag"解释为相对于当前工作目录的路径，而不是根目录下的路径。
+```
+
+![image-20230527161454122](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527161454122.png)
+
+## 帝国CMSo3（青少）
 
 
 
