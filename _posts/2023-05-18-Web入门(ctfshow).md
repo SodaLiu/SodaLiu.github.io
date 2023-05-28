@@ -958,6 +958,20 @@ show_source(next(array_reverse(scandir(pos(localeconv())))));
 
 ![image-20230528114332835](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528114332835.png)
 
+这里我们能看见这里有几个数组。前置加上next（）。
+
+![image-20230528114711114](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528114711114.png)
+
+```
+?变量名=print_r(array_pop(next(get_defined_vars())));    #弹出
+```
+
+## web41
+
+![image-20230528115447524](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528115447524.png)
+
+
+
 ## 方便下一个博客的链接点
 
 ## 番外篇
