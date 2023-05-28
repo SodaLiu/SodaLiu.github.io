@@ -811,7 +811,7 @@ http://url/?c=eval($_GET[1]);&1=phpinfo(); //这里让他执行第一个参数
 
 这里其实使用到的就是一个跳板，可以无视任何正则。
 
-## web32---超级过滤
+## web32---超级过滤（文件包含）
 
 ![image-20230527224141322](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527224141322.png)
 
@@ -825,9 +825,119 @@ ban掉了**反引号，逗号，括号，分号**。上面的跳板用不了了�
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527225449826.png" alt="image-20230527225449826" style="zoom: 33%;" />
 
+这里可以通过读取非php的文本文件来得到flag，但是还是用教程方法先做。这里用到的是base64编码的过滤器，也是伪协议，通过指定的一个通道来读取某个资源。
 
+![image-20230527232539587](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527232539587.png)
+
+filter代表使用通道，后面表示通道名字为base64.
+
+![image-20230527232650653](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527232650653.png)
+
+解码
+
+![image-20230527232724578](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527232724578.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527232815043.png" alt="image-20230527232815043" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527232839563.png" alt="image-20230527232839563" style="zoom:50%;" />
 
 ## web33
+
+还是过滤。
+
+![image-20230527233447142](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527233447142.png)
+
+限制和上面一题应该是差不多？？多过滤一个**双引号**。相同方法和上面一样。
+
+![image-20230527234448246](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230527234448246.png)
+
+它这里介绍了第二种方法。include可以换成require
+
+![image-20230528094608445](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528094608445.png)
+
+## web34
+
+过滤。
+
+![image-20230528094828341](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528094828341.png)
+
+多了个**冒号**。前面的方法也能做。
+
+![image-20230528095124663](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528095124663.png)
+
+不需要使用括号的
+
+```
+echo print isset unset include require
+```
+
+## web35
+
+过滤。
+
+![image-20230528095718158](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528095718158.png)
+
+ban了**<**和**=**。所以是一样的。
+
+![image-20230528100037007](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528100037007.png)
+
+## web36
+
+还是过滤.....（吐了）
+
+![image-20230528100648676](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528100648676.png)
+
+ban了个**反斜杠**还有0到9的数字，这样看来换行符用不了了。不让用数字可以用字母。
+
+![image-20230528101124636](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528101124636.png)
+
+![image-20230528101147358](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528101147358.png)
+
+## web37
+
+过滤。终于有点不一样了。
+
+![image-20230528101242721](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528101242721.png)
+
+使用到data的伪协议。
+
+```
+data://text/plain,<?php 代码;?>  #data协议的作用是把后面的字符串作为php代码进行执行
+```
+
+![image-20230528102027839](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528102027839.png)
+
+![image-20230528102240345](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528102240345.png)
+
+## web38
+
+过滤。
+
+![image-20230528102348236](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528102348236.png)
+
+这里将<?php换成**<?=**（短标签），然后php换成问号占位符。没问题。
+
+![image-20230528102947617](image-20230528102947617.png)
+
+## web39
+
+还是过滤。
+
+![image-20230528103129884](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528103129884.png)
+
+没有回显了，而且后面强制加了.php的后缀。但是这条还是可以执行，直接**rce**了。
+
+*RCE是远程代码执行（Remote Code Execution）的缩写。它是一种攻击技术，攻击者可以利用漏洞远程执行任意代码，从而控制目标系统或服务器。攻击者通过RCE可以在目标系统上执行恶意代码，这可能会导致数据泄露、系统崩溃、服务中断等严重后果。*
+
+![image-20230528104619682](image-20230528104619682.png)
+
+![image-20230528104909430](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528104909430.png)
+
+![image-20230528105008650](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528105008650.png)
+
+## web40
+
+
 
 ## 方便下一个博客的链接点
 
