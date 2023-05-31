@@ -972,6 +972,10 @@ show_source(next(array_reverse(scandir(pos(localeconv())))));
 
 ![image-20230528115542544](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230528115542544.png)
 
+不允许数字，也不允许有字母。不能有大小写字母。关键字符也不能有。
+
+通过一些特殊字符来构造出一个字母。这里使用到官方提示的一个脚本文件。
+
 ## 方便下一个博客的链接点
 
 ## 番外篇
@@ -1134,6 +1138,18 @@ sudo apt-get update 更新一下，应该就好了
 ```
 
 发现不太行，我最好还是从01开始做，到时候再说！先回ctfshow去喽！（溜）
+
+## web签到
+
+![image-20230530232730285](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230530232730285.png)
+
+这里参考的wp[在这里](https://blog.csdn.net/m0_64815693/article/details/127835745)
+
+首先这里有中文，换成url编码执行
+
+```
+群=%E7%BE%A4
+```
 
 
 
