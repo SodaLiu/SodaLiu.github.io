@@ -1087,7 +1087,27 @@ system(ls;ls >/dev/null 2>&1");
 
 ## web44
 
+![image-20230603005828293](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603005828293.png)
 
+多ban一个flag.问号做占位符。
+
+![image-20230603005936275](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603005936275.png)
+
+## web45
+
+![image-20230603010038644](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603010038644.png)
+
+ban了一个空吗...也就是说我的输入不能检测出有空%20（ascii码）就行了。
+
+这是官方方式，使用到echo$IFS`tac$IFS*的方式
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603010455575.png" alt="image-20230603010455575" style="zoom:50%;" />
+
+第二种方式，ascii码表中找一个tab来试试。[ascii码对照表](https://baike.baidu.com/item/ASCII/309296?fromtitle=ascii%E7%A0%81&fromid=99077&fr=aladdin)，一般而言php中替代的是09
+
+![image-20230603011119401](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603011119401.png)
+
+![image-20230603011257668](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603011257668.png)
 
 ## 方便下一个博客的链接点
 
