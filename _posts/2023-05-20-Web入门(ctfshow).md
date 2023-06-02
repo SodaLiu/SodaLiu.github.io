@@ -1093,7 +1093,7 @@ system(ls;ls >/dev/null 2>&1");
 
 ![image-20230603005936275](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603005936275.png)
 
-## web45
+## web45-49
 
 ![image-20230603010038644](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603010038644.png)
 
@@ -1108,6 +1108,38 @@ ban了一个空吗...也就是说我的输入不能检测出有空%20（ascii码
 ![image-20230603011119401](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603011119401.png)
 
 ![image-20230603011257668](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603011257668.png)
+
+![image-20230603011502761](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603011502761.png)
+
+依然可用。
+
+![image-20230603011609073](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603011609073.png)
+
+![image-20230603011712165](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603011712165.png)
+
+![image-20230603011809655](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603011809655.png)
+
+![image-20230603012026440](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603012026440.png)
+
+![image-20230603012103876](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603012103876.png)
+
+## web50
+
+终于到50停下来了，原因是来了个百分号。
+
+![image-20230603012336350](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603012336350.png)
+
+这里使用带行号读，使用nl👉👉[nl命令详解](https://www.initroot.com/linuxintroduction/linuxfileviewnl.html)
+
+```nl
+nl<fla''g.php||   # ''由于这种方式不支持通配符，所以使用单引号自动忽略。打开源代码即可
+```
+
+![image-20230603012949145](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603012949145.png)
+
+## web51
+
+
 
 ## 方便下一个博客的链接点
 
