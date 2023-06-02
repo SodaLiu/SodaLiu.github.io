@@ -1031,7 +1031,61 @@ while True:
 
 ![image-20230531164351534](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230531164351534.png)
 
-很短，这里参数进到system里，是可以执行指令的意思吗？但是后面的指向会去到哪里？
+很短，这里参数进到system里，是可以执行指令的意思吗？但是后面的写入 **>** 会去到哪里？看了讲解说是会输出到黑洞。*即文件描述符，往里面写的任何数据都不会保存*
+
+这里2代表的是错误输出，1代表的是标准输出。把错误输出通过>&绑定到标准输出，也就是说标准错误的输出也会在标准输出里面，然后统一输出到这个黑洞里面。
+
+这句话所以就一个意思，所有输入的c的值是不显示的。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603001506425.png" alt="image-20230603001506425" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603001058595.png" alt="image-20230603001058595" style="zoom: 50%;" />
+
+提示告诉我们需要查看源代码，使用cat指令。
+
+面对这样的一种过滤方式，可以采用**双写绕过**，它是把第二个命令写到黑洞里，通过分号阻隔后，第一个值就会正常输出。
+
+```示例
+?c=ls;ls
+此时system($c." >/dev/null 2>&1")就会是
+system(ls;ls >/dev/null 2>&1");
+第一个命令正常执行，第二个命令被放入黑洞。
+```
+
+![image-20230603003421269](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603003421269.png)
+
+这里注意，之前说过php下cat是需要看源码才能显示flag的，所以这里直接tac flag.php
+
+![image-20230603003529275](image-20230603003529275.png)
+
+## web43
+
+![image-20230603003727644](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603003727644.png)
+
+这里进行了一次过滤，禁用了分号，可以考虑用>?，然后把cat禁了。
+
+#### 常用(陆续补充)
+
+```Rainsblue
+分号;          >?
+换行符/        %0a
+；			命令分割符
+&& 			 第一个命令执行成功后才执行第二个命令，相当于分割符，注意使用url解码，为%26%26
+```
+
+这里还是跟着教程走。先将输入用url编码。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603004941731.png" alt="image-20230603004941731" style="zoom:50%;" />
+
+![image-20230603005033737](image-20230603005033737.png)
+
+![image-20230603005218119](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603005218119.png)
+
+![image-20230603005531403](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603005531403.png)
+
+相同的方式在前面可用。
+
+## web44
 
 
 
