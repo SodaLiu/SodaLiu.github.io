@@ -1133,6 +1133,7 @@ ban了一个空吗...也就是说我的输入不能检测出有空%20（ascii码
 
 ```nl
 nl<fla''g.php||   # ''由于这种方式不支持通配符，所以使用单引号自动忽略。打开源代码即可
+下面ls能在没有看见源代码的时候看见1
 ```
 
 ![image-20230603012949145](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603012949145.png)
