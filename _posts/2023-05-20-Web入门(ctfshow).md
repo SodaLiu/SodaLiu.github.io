@@ -1188,9 +1188,41 @@ echo输出时记得要进行url编码，因为这里private不可见，不这么
 
 多了个判定。用户名如果和密码不相同，就会输出条件。这里使用魔术方法_construct进行一个构造，修改自己的账密即可。
 
-
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604200715926.png" alt="image-20230604200715926" style="zoom:50%;" />
 
 ![image-20230604200635864](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604200635864.png)
+
+#### $this 和_construct
+
+在 PHP 中，$this 是一个特殊的对象，表示当前对象的引用。它只能在类中使用，用于引用当前实例化的对象。当在一个方法中使用 $this 时，它指的是调用该方法的对象本身。
+
+例如，如果有一个名为 MyClass 的类，它有一个名为 myMethod 的方法，那么在 myMethod 方法中使用 $this 就会引用当前实例化的 MyClass 对象。
+
+下面是一个示例，演示如何在 PHP 类中使用 $this：
+
+```php
+class MyClass {
+    private $myProperty;
+    public function __construct($value) {
+        $this->myProperty = $value;
+    }
+    public function myMethod() {
+        echo "The value of my property is: " . $this->myProperty;
+    }
+}
+$obj = new MyClass("Hello");
+$obj->myMethod(); // 输出 "The value of my property is: Hello"
+```
+
+在上面的示例中，$this->myProperty 引用当前 MyClass 对象的 myProperty 属性，而 $this->myMethod() 引用当前 MyClass 对象的 myMethod 方法。
+
+_construct，是将一个值进行修改的方法。在反序列化过程中，它会作为魔术方法优先调用。
+
+这里有一个很妙的点，它是作为一种**动作**，注意是**动作**。修改了false为true，而这个动作是有痕迹的。换言之，他模拟了修改的操作，使每一步看起来像是真的一样，这才是魔术真谛。
+
+## web257
+
+
 
 ## 方便下一个博客的链接点
 
