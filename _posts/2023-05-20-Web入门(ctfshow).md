@@ -1238,7 +1238,11 @@ _construct，是将一个值进行修改的方法。在反序列化过程中，�
 
 ![image-20230604213539814](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604213539814.png)
 
+记得每次execute后要刷新，否则可能跳不出来。
 
+![image-20230604214347501](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604214347501.png)
+
+![image-20230604214449065](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604214449065.png)
 
 ## 方便下一个博客的链接点
 
