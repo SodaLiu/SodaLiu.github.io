@@ -1140,6 +1140,28 @@ nl<fla''g.php||   # ''由于这种方式不支持通配符，所以使用单引�
 
 ## web51
 
+![image-20230603013253205](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603013253205.png)
+
+## web254（反序列化）
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604175822703.png" alt="image-20230604175822703" style="zoom: 50%;" />
+
+定义了一个类。没有一个魔术方法（魔术方法就是下划线开头的），前面先不看，先看第二张图。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604175857330.png" alt="image-20230604175857330" style="zoom:50%;" />
+
+这里get两个参数，然后实例化一个类（$user = new ctfShowUser），但是这里没有魔术方法，所以没有什么代码可执行。if($user-->login($username,$password))，这里执行了一次代码，执行了类里的一个login，如果返回True，那么就checkVip。这里不需要输入反序列化的字符。这里username和password都是6个x。
+
+当判断为真，会将返回值重新写入isVip，然后回到下面。传个参试试。这里主要是以了解类为主。
+
+![image-20230604184547071](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604184547071.png)
+
+![image-20230604184954916](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604184954916.png)
+
+post可以这样写，一样的。好处是它写在body里面，然后，注意符号要编个url的码。
+
+## web255
+
 
 
 ## 方便下一个博客的链接点
