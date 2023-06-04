@@ -1180,7 +1180,15 @@ echo输出时记得要进行url编码，因为这里private不可见，不这么
 
 这里再按照上一题，先过反序列第一层判定，再过第二层的xxxxxx。
 
+![image-20230604194622194](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604194622194.png)
 
+## web256
+
+![image-20230604195205859](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604195205859.png)
+
+多了个判定。用户名如果和密码不相同，就会输出条件。这里使用魔术方法_struct进行一个构造，修改自己的账密
+
+![image-20230604200014950](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604200014950.png)
 
 
 
