@@ -1244,6 +1244,14 @@ _construct，是将一个值进行修改的方法。在反序列化过程中，�
 
 ![image-20230604214449065](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604214449065.png)
 
+## web258
+
+还是个后门利用。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604214613197.png" alt="image-20230604214613197" style="zoom:50%;" />
+
+匹配一个序列化不可能序列化的内容。
+
 ## 方便下一个博客的链接点
 
 ## 番外篇
