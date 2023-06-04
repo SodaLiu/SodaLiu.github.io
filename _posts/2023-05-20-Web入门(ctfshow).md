@@ -1222,7 +1222,11 @@ _construct，是将一个值进行修改的方法。在反序列化过程中，�
 
 ## web257
 
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604211216441.png" alt="image-20230604211216441" style="zoom:50%;" />
 
+分析一下，首先是一个反序列化的操作，cookie为user，然后是一个login的指向。不过这里有一个魔术方法，先执行了new info（），class现在会变成user。然后有一个销毁的destruct。看来flag在code里面。利用后门类。
+
+**反序列化的宗旨就是不能改它的方法的代码，也就是它的类方法的代码，但是我可以控制类方法的属性。**通过控制属性来完成我们所需要的一些操作。这就是反序列化的一个大题思路。
 
 ## 方便下一个博客的链接点
 
