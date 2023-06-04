@@ -1228,6 +1228,18 @@ _construct，是将一个值进行修改的方法。在反序列化过程中，�
 
 **反序列化的宗旨就是不能改它的方法的代码，也就是它的类方法的代码，但是我可以控制类方法的属性。**通过控制属性来完成我们所需要的一些操作。这就是反序列化的一个大题思路。
 
+这里最重要的就是后门类，所以构造改为backDoor。back里code改成传参，传post参，参名为1.
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604213637864.png" alt="image-20230604213637864" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604213749310.png" alt="image-20230604213749310" style="zoom:50%;" />
+
+成功rce。
+
+![image-20230604213539814](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604213539814.png)
+
+
+
 ## 方便下一个博客的链接点
 
 ## 番外篇
