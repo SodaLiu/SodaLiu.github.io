@@ -1162,6 +1162,26 @@ post可以这样写，一样的。好处是它写在body里面，然后，注意
 
 ## web255
 
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604191003284.png" alt="image-20230604191003284" style="zoom:50%;" />
+
+这里用的就不是实例化，用的是unserialize（反序列化），简单来说就是将字符串变为值，序列化就是将原本的值变为字符。所以这里值的关系就不大了。我学操作，然后说是先将class代码复制到本地php。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604192841076.png" alt="image-20230604192841076" style="zoom:50%;" />
+
+然后我们看一下它的调用。和上题代码一样，唯一不同的是，这里即使用户名和密码对了，但是状态依旧是false。
+
+我们需要做的是把vip状态进行修改。第一种尝试是，在本地直接改为true。
+
+![image-20230604193946553](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604193946553.png)
+
+echo输出时记得要进行url编码，因为这里private不可见，不这么做可能会出现不可见字符。然后括号里面先进行序列化，再新建一个类。这个时候要修改一下cookie。cookie名字叫user。
+
+![image-20230604194150406](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604194150406.png)
+
+这里再按照上一题，先过反序列第一层判定，再过第二层的xxxxxx。
+
+
+
 
 
 ## 方便下一个博客的链接点
