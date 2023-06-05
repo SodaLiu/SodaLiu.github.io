@@ -1252,15 +1252,41 @@ _construct，是将一个值进行修改的方法。在反序列化过程中，�
 
 序列化一个不可能序列化的内容。我们要匹配它。
 
-思路是通过class的类做一个反序列化。
+思路是通过class的类做一个反序列化去找后门类。我们观察到，destruct和backdoor当中都有getinfo方法，**通过它销毁自身getinfo方法的时候调用后门类的一个getinfo方法来实现一个rce**（像不像魔术，就是仍然保有getinfo方法），我们看到backdoor里会执行当前变量为code，这里就是利用点。**之后这也是一个经验。**
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605125026424.png" alt="image-20230605125026424" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605125918526.png" alt="image-20230605125918526" style="zoom:50%;" />
 
 修改部分。
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605125154048.png" alt="image-20230605125154048" style="zoom:67%;" />
 
+这里输出的是序列化字符。绕过正则，正则的规则是不能出现o：数字，这里按正常思路就是下面这个。
+
 ![image-20230605125518469](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605125518469.png)
+
+这里有两处都需要绕过，O:11和O:8。这里采用替换的方法。我们先在字符上做一个替换。
+
+```php
+str_replace ($searchVal,$replaceVal,$subjectVal,$count )
+
+参数：该函数接受四个参数，其中3个是强制性的，1个是可选的。所有这些参数如下所述：
+
+●　$searchVal：此参数可以是字符串和数组类型。此参数指定要搜索和替换的字符串。
+
+●　$replaceVal：此参数可以是字符串和数组类型。此参数指定要用于替换$searchVal字符串的字符串。
+
+●　$subjectVal：此参数可以是字符串和数组类型。此参数指定我们要搜索$ searchVal并使用$ replaceVal替换的字符串或字符串数组。
+
+●　$count：此参数是可选的，如果传递，则其值将设置为对字符串$ subjectVal执行的替换操作的总数。
+```
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605131029535.png" alt="image-20230605131029535" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605131144549.png" alt="image-20230605131144549" style="zoom:50%;" />
+
+![image-20230605131252326](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605131252326.png)
 
 
 
