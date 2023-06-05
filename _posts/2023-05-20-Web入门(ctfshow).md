@@ -1250,7 +1250,19 @@ _construct，是将一个值进行修改的方法。在反序列化过程中，�
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604214613197.png" alt="image-20230604214613197" style="zoom:50%;" />
 
-匹配一个序列化不可能序列化的内容。
+序列化一个不可能序列化的内容。我们要匹配它。
+
+思路是通过class的类做一个反序列化。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605125026424.png" alt="image-20230605125026424" style="zoom:50%;" />
+
+修改部分。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605125154048.png" alt="image-20230605125154048" style="zoom:67%;" />
+
+![image-20230605125518469](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230605125518469.png)
+
+
 
 ## 方便下一个博客的链接点
 
