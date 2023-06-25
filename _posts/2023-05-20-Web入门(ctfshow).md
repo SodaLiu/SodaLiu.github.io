@@ -1527,7 +1527,7 @@ sudo apt-get update 更新一下，应该就好了
 群=%E7%BE%A4
 ```
 
-## web3
+## web3（伪协议）
 
 ![image-20230625191141517](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625191141517.png)
 
@@ -1566,9 +1566,9 @@ ctrl+r，放在repeater里看一下，末尾加一下php代码，**由input执�
 
 ctfshow{7edc426c-211b-4bb2-8030-4b90e0e250b9}
 
-## web4
+## web4（日志注入）
 
-![image-20230625195101962](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625195101962.png)
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625195101962.png" alt="image-20230625195101962" style="zoom:50%;" />
 
 ![image-20230625195334700](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625195334700.png)
 
@@ -1599,7 +1599,23 @@ ctfshow{7edc426c-211b-4bb2-8030-4b90e0e250b9}
 
 ![image-20230625212723077](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625212723077.png)
 
+https://blog.csdn.net/qq_62708558/article/details/123030828  大概讲了这个一句话是什么作用
 
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625213001779.png" alt="image-20230625213001779" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625213059560.png" alt="image-20230625213059560" style="zoom:50%;" />
+
+ <?php eval($_POST['cmd']); ?>这里的意思就是执行提交的变量。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625213352114.png" alt="image-20230625213352114" style="zoom: 33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625213535481.png" alt="image-20230625213535481" style="zoom:33%;" />
+
+![image-20230625213641073](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625213641073.png)
+
+![image-20230625213654552](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625213654552.png)
+
+ 所以以后我们遇见类似的题目时，php伪协议用不了可以尝试日志注入。
 
 #### 方便下一个博客的链接点
 
