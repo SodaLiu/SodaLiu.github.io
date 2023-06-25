@@ -1550,19 +1550,54 @@ sudo apt-get update 更新一下，应该就好了
 
 php伪协议中经常用到的是**php://filter和php://input**，filter用来读取php文件的源码，它本身的含义是滤波器。然后input则是用来执行php代码，通常以post形式，不是get。所以它会在请求体里，不是在url当中。
 
+而include函数所包含的文件会被执行，配合伪协议甚至可以直接RCE。
+
 ![image-20230625194137050](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625194137050.png)
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625194203321.png" alt="image-20230625194203321" style="zoom:50%;" />
 
 ctrl+r，放在repeater里看一下，末尾加一下php代码，**由input执行**
 
-![image-20230625194415162](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625194415162.png)
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625194415162.png" alt="image-20230625194415162" style="zoom:50%;" />
 
 那接下来我就知道了😊😊😊
 
 ![image-20230625194845331](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625194845331.png)
 
 ctfshow{7edc426c-211b-4bb2-8030-4b90e0e250b9}
+
+## web4
+
+![image-20230625195101962](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625195101962.png)
+
+![image-20230625195334700](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625195334700.png)
+
+什么情况，error了。会不会是ban了。估计是伪协议不让用了。
+
+这里需要用到**日志注入**的知识，这里地址会是**/var/log/nginx/access.log**
+
+![image-20230625200233392](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625200233392.png)
+
+这里就是直接读取日志。[Nginx access.log日志详解及统计分析](https://blog.csdn.net/weixin_45698637/article/details/128486012)
+
+能看见这里的日志都是我打开环境之后做的操作。所以这也是个警示，你所有的搜索都会有日志痕迹。
+
+在user-agent中插入一句话木马。
+
+```一句话木马
+例子：
+黑客在注册信息的电子邮箱或者个人主页等中插入类似如下代码：
+<%execute request("value")%>
+其中value是值，所以你可以更改自己的值，前面的request就是获取这个值
+<%eval request("value")%>(现在比较多见的，而且字符少，对表单字数有限制的地方特别的实用)
+当知道了数据库的URL，就可以利用本地一张网页进行连接得到Webshell。
+（不知道数据库也可以，只要知道<%eval request("value")%>这个文件被插入到哪一个ASP文件里面就可以了。）
+这就被称为一句话木马，它是基于B/S结构的。
+```
+
+[中国蚁剑用法](https://blog.csdn.net/m0_64338211/article/details/122528771)\[安装问题](https://blog.csdn.net/Ahuuua/article/details/109034528)
+
+![image-20230625212723077](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625212723077.png)
 
 
 
