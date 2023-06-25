@@ -1531,6 +1531,37 @@ sudo apt-get update 更新一下，应该就好了
 
 ![image-20230625191141517](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625191141517.png)
 
+[日志注入](https://blog.csdn.net/weixin_63231007/article/details/124917381?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-124917381-blog-113716712.235%5Ev38%5Epc_relevant_anti_vip_base&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-124917381-blog-113716712.235%5Ev38%5Epc_relevant_anti_vip_base&utm_relevant_index=2)
+
+[php伪协议](https://blog.csdn.net/qq_37466661/article/details/126203437)
+
+```php
+<?php include($_GET['url']);?>
+这是一个php伪协议的标志。
+没有提示我们flag在哪里，filter试一下flag.php,flag,txt,flag都没有
+用php://input试一下，burp抓包
+```
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625193540531.png" alt="image-20230625193540531" style="zoom:50%;" />
+
+这边用php://input试一下，然后抓包
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625193900497.png" alt="image-20230625193900497" style="zoom:50%;" />
+
+php伪协议中经常用到的是**php://filter和php://input**，filter用来读取php文件的源码，它本身的含义是滤波器。然后input则是用来执行php代码，通常以post形式，不是get。所以它会在请求体里，不是在url当中。
+
+![image-20230625194137050](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625194137050.png)
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625194203321.png" alt="image-20230625194203321" style="zoom:50%;" />
+
+ctrl+r，放在repeater里看一下，末尾加一下php代码，**由input执行**
+
+![image-20230625194415162](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625194415162.png)
+
+那接下来我就知道了😊😊😊
+
+
+
 #### 方便下一个博客的链接点
 
 
