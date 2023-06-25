@@ -1617,6 +1617,82 @@ https://blog.csdn.net/qq_62708558/article/details/123030828  大概讲了这个�
 
  所以以后我们遇见类似的题目时，php伪协议用不了可以尝试日志注入。
 
+这里是蚁剑的官方说明书。[蚁剑](https://www.yuque.com/antswordproject/antsword/qg3g73)
+
+上面的操作就是在日志里新建一个shell的方法。
+
+## web5
+
+```php+HTML
+ctf.show_web5
+where is flag?
+<?php
+error_reporting(0);
+?>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0" />
+    <title>ctf.show_web5</title>
+</head>
+<body>
+    <center>
+    <h2>ctf.show_web5</h2>
+    <hr>
+    <h3>
+    </center>
+    <?php
+        $flag="";
+        $v1=$_GET['v1'];
+        $v2=$_GET['v2'];
+        if(isset($v1) && isset($v2)){
+            if(!ctype_alpha($v1)){
+                die("v1 error");
+            }
+            if(!is_numeric($v2)){
+                die("v2 error");
+            }
+            if(md5($v1)==md5($v2)){
+                echo $flag;
+            }
+        }else{
+        
+            echo "where is flag?";
+        }
+    ?>
+
+</body>
+</html>
+
+```
+
+这里我们做一个分析，v1要求是字母，v2要求是数字，两者md5相同时跳出flag。
+
+这里牵扯到md5函数的绕过。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625215247503.png" alt="image-20230625215247503" style="zoom:50%;" />
+
+只要满足0E开头就可以。
+
+```md5
+md5(str)
+    QNKCDZO
+    240610708
+    s878926199a
+    s155964671a
+    s214587387a
+    s214587387a
+    sha1(str)
+ sha1后以0E开头
+        sha1(‘aaroZmOk’)
+        sha1(‘aaK1STfY’)
+        sha1(‘aaO8zKZF’)
+        sha1(‘aa3OFF9m’)
+```
+
+![image-20230625215508302](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625215508302.png)
+
 #### 方便下一个博客的链接点
 
 
