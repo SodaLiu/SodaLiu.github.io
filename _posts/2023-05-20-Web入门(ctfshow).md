@@ -1560,6 +1560,10 @@ ctrl+r，放在repeater里看一下，末尾加一下php代码，**由input执�
 
 那接下来我就知道了😊😊😊
 
+![image-20230625194845331](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625194845331.png)
+
+ctfshow{7edc426c-211b-4bb2-8030-4b90e0e250b9}
+
 
 
 #### 方便下一个博客的链接点
