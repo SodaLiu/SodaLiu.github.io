@@ -1142,6 +1142,44 @@ nl<fla''g.php||   # ''由于这种方式不支持通配符，所以使用单引�
 
 ![image-20230603013253205](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230603013253205.png)
 
+久违，今天是6月25日。
+
+应该是可以用上一题的payload来进行攻击。
+
+![image-20230625184200916](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625184200916.png)
+
+![image-20230625184244808](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625184244808.png)
+
+## web52
+
+![image-20230625184339657](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625184339657.png)
+
+把管道符封了，但是把dollar符给放出来了，所以可以采取使用重命名的方式来做。
+
+![image-20230625184800991](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625184800991.png)
+
+![image-20230625184859376](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625184859376.png)
+
+这里用了45-49的一个$IFS
+
+![image-20230625185111694](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625185111694.png)
+
+![image-20230625185729172](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625185729172.png)
+
+这里因为数字被过滤，所以只能用这种方式放进去。mv${IFS}fla?.php${IFS}a.txt
+
+![image-20230625185904972](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625185904972.png)
+
+假的。所以需要用系统自带的空格来看根目录。
+
+![image-20230625190140969](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625190140969.png)
+
+?c=ls${IFS}/||ls，然后将它移动到默认网页根目录。注意下面有一个问题，就是这个flag会被过滤，所以黏贴的时候注意用问号替代它。
+
+![image-20230625190334240](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625190334240.png)
+
+![image-20230625190743861](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625190743861.png)
+
 ## web254（反序列化）
 
 <img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230604175822703.png" alt="image-20230604175822703" style="zoom: 50%;" />
@@ -1489,7 +1527,9 @@ sudo apt-get update 更新一下，应该就好了
 群=%E7%BE%A4
 ```
 
+## web3
 
+![image-20230625191141517](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625191141517.png)
 
 #### 方便下一个博客的链接点
 
