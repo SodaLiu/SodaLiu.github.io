@@ -1180,7 +1180,127 @@ nl<fla''g.php||   # ''由于这种方式不支持通配符，所以使用单引�
 
 ![image-20230625190743861](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625190743861.png)
 
+## web171（sql注入）
 
+![image-20230703141150933](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703141150933.png)
+
+![image-20230703141552383](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703141552383.png)
+
+我们来看看我们到底做了什么。
+
+上面列举了一个示例语句，这是搜索工作的原理：
+
+`$sql = "select username, password from user where username !='flag' and id = '".$_GET['id']."' limit 1;"`
+
+这句话的意思很简单，就是找用户名不等于flag，id为输入的用户名和密码。
+
+我们输入`1' or 1=1 --+`起到的作用是什么呢？他本质就是下面这一句
+
+select username,password from user where username !='flag' and id = '1' or 1=1;
+
+我们知道and的优先级比or高，所以or两端并列，**假or真永真**。所以结果就得到了。
+
+### --+的作用
+
+```
+'--+' 是 SQL 注入攻击中常用的字符串，它的作用是注释掉 SQL 语句中的剩余部分。在 SQL 语句中，"--" 表示注释，"+" 是连接符，因此，'--+' 的作用就是将 "--" 注释符与后面的语句连接在一起，从而注释掉整个查询语句中的剩余部分，只保留前面的部分。这样，攻击者就可以在不知道完整的 SQL 查询语句的情况下，构造恶意参数，绕过登录验证或者获取其他敏感信息。
+```
+
+## web172
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703142909201.png" alt="image-20230703142909201" style="zoom:50%;" />
+
+懵了。
+
+![image-20230703142940863](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703142940863.png)
+
+更懵了。什么鬼。
+
+应该是多了个过滤。
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703143150855.png" alt="image-20230703143150855" style="zoom:50%;" />
+
+这里要使用**联合查询**来绕过这个username的审查。
+
+第一步，看返回几列。使用**order by**，接在末尾就行，这里返回是两列。
+
+![image-20230703143917681](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703143917681.png)
+
+第二步，**联合查询**，爆库看库名
+
+`1' union select 1, database()--+`
+
+![image-20230703144110362](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703144110362.png)
+
+第三步，union注入查出它的列名
+
+`1' union select 1, (select group_concat(column_name) from information_schema.columns where table_name='ctfshow_user2')--+`
+
+这里union和前面对应，用户名处直接返回一个数字，密码则是用**group_concat（聚合函数）**给拼在一起了。
+
+![image-20230703144359162](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703144359162.png)
+
+最后一步，代入列名注入
+
+`id=-1' union select 1,(select concat(username,password) from ctfshow_user2 where username='flag')--+`
+
+### union和group_concat、concat操作符
+
+UNION 是 SQL 中的一种操作符，用于将两个或多个 SELECT 语句的结果合并在一起。具体来说，UNION 操作符用于将两个 SELECT 语句的结果集合并在一起，并去除其中的重复行。需要注意的是，UNION 操作符要求两个 SELECT 语句返回的列数和数据类型必须相同，否则会产生语法错误。
+
+在 SQL 注入攻击中，攻击者往往使用 UNION 操作符来构造恶意查询语句，以达到获取敏感信息或者绕过登录验证的目的。攻击者会将恶意查询语句插入到原始的查询语句中，从而欺骗数据库执行恶意操作。例如，攻击者可以构造如下的恶意查询语句：
+
+```sql
+SELECT username, password FROM users WHERE username = 'admin' AND password = '123456' UNION SELECT 1, 'hacker'--
+```
+
+这个查询语句中，攻击者使用 UNION 操作符将两个 SELECT 语句的结果合并在一起，第一个 SELECT 语句用于验证用户名和密码是否正确，第二个 SELECT 语句则返回了一个数字 1 和一个恶意字符串 'hacker'。攻击者使用注释符 '--' 来注释掉查询语句中的剩余部分，从而绕过登录验证。
+
+GROUP_CONCAT 是 SQL 中的一种聚合函数，用于将**多行**数据中的某个字段的值合并成一个字符串。我们上面的操作就把flag和ctfshow用**concat（两行）**给拼在一起了，所以躲过了审查。
+
+![image-20230703144458269](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703144458269.png)
+
+## web173
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703145816503.png" alt="image-20230703145816503" style="zoom:50%;" />
+
+### preg_match
+
+```
+(!preg_match('/flag/i', json_encode($ret))) 是一个 PHP 代码中的逻辑表达式，用于检查变量 $ret 中是否包含字符串 "flag"。具体来说，这个表达式使用了 preg_match 函数，该函数用于在字符串中查找指定的模式。在这个表达式中，'/flag/i' 是一个正则表达式模式，用于匹配字符串中的 "flag" 子串。其中，/i 表示不区分大小写匹配。
+
+preg 是 PHP 中一个常用的函数库，用于处理正则表达式。它的全称是 Perl Compatible Regular Expressions，即“兼容 Perl 的正则表达式”。这个函数库提供了一系列函数，用于在 PHP 中使用正则表达式进行字符串匹配、搜索、替换等操作。在 PHP 中，preg 函数库是非常常用的，可以用于处理各种文本数据，例如验证邮箱、URL、手机号码等等。
+```
+
+首先判断是3列
+
+![image-20230703150153561](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703150153561.png)
+
+联合查询没问题。
+
+![image-20230703150250228](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703150250228.png)
+
+![image-20230703151053100](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703151053100.png)
+
+`1' union select 1,(select group_concat(column_name) from information_schema.columns where table_name = 'ctfshow_user3'),3`得到了3个列名
+
+![image-20230703151915100](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703151915100.png)
+
+我用count查了一下，就25条数据，所以bp一下应该没问题。但是应该就是这个过滤了，它把带flag的都过滤了。
+
+后来我想直接从25条里找不就行了，所以也没用过滤，直接搜就行。果然成功了。
+
+![image-20230703152604641](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703152604641.png)
+
+### 过滤方法（变16进制）
+
+有个看着挺好玩的，把它变成16进制。
+
+`1' union select id,hex(username),password from ctfshow_user3 where hex(username)='666c6167'--+`
+
+![image-20230703152858046](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703152858046.png)
+
+## sql锚点
 
 ## web254（反序列化）
 
