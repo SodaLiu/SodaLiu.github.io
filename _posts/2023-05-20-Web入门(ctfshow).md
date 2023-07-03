@@ -1693,6 +1693,18 @@ md5(str)
 
 ![image-20230625215508302](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230625215508302.png)
 
+## 萌新专属红包题
+
+打开发现是一个登录界面
+
+<img src="https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703133439618.png" alt="image-20230703133439618" style="zoom:50%;" />
+
+![image-20230703140654267](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/image-20230703140654267.png)
+
+动易默认密码是admin888，flag在包里就能抓，还以为要sql注入呢
+
+ctfshow{d87bdb55-2d26-47b3-9387-861970794503}
+
 #### 方便下一个博客的链接点
 
 
