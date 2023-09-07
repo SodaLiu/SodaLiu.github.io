@@ -81,12 +81,20 @@ gitalk:
 # ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
+# Show number of visitors of each article.
+# You can visit https://leancloud.cn to get AppID and AppKey.
+# AppID and AppKey are recommended to be the same as valine's for counter compatibility.
+# Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
-  enable: true
-  app_id: BuXs5blXrDtTF53qoIWObCyy-gzGzoHsz
-  app_key: AwbQ6DDn0eRr2V19NWqdKXH6
+  enable: false
+  app_id: BuXs5blXrDtTF53qoIWObCyy-gzGzoHsz # <your app id>
+  app_key: AwbQ6DDn0eRr2V19NWqdKXH6 # <your app key>
+  # Required for apps from CN region
+  server_url: https://rainsbluechan.github.io # <your server url>
+  # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
+  # If you don't care about security in leancloud counter and just want to use it directly
+  # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
   security: true
-  betterPerformance: false
 
 
 # Featured Tags
