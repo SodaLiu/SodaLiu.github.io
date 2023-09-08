@@ -74,27 +74,11 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
-# ba_track_id: b50bf2b12b5338a1845e33832976fd68
+ba_track_id: 97d06a8efeccb02383f82aa9211ffb2d
 
 # Google Analytics
-# ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-# ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
-
-
-# Show number of visitors of each article.
-# You can visit https://leancloud.cn to get AppID and AppKey.
-# AppID and AppKey are recommended to be the same as valine's for counter compatibility.
-# Do not enable both `valine.visitor` and `leancloud_visitors`.
-leancloud_visitors:
-  enable: true
-  app_id: BuXs5blXrDtTF53qoIWObCyy-gzGzoHsz # <your app id>
-  app_key: AwbQ6DDn0eRr2V19NWqdKXH6 # <your app key>
-  # Required for apps from CN region
-  server_url: https://buxs5blx.lc-cn-n1-shared.com # <your server url>
-  # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
-  # If you don't care about security in leancloud counter and just want to use it directly
-  # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
-  security: false
+ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 # Featured Tags
