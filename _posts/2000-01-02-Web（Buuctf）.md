@@ -30,3 +30,9 @@ tags:
 SQL语句的查询结果为TRUE，就意味着认证成功，也可以登录到系统中。
 输入用户名【admin】，密码【2’or’1】，即可登录成功
 ![image-20231029145344160](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/202310291453128.png)
+
+## [极客大挑战 2019]Havefun1
+
+![image-20231029150245644](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/202310291502269.png)
+
+![image-20231029150157604](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/202310291501309.png)
