@@ -36,3 +36,6 @@ SQL语句的查询结果为TRUE，就意味着认证成功，也可以登录到�
 ![image-20231029150245644](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/202310291502269.png)
 
 ![image-20231029150157604](https://cdn.jsdelivr.net/gh/rainsbluechan/blogimage@main/img/202310291501309.png)
+
+## [网鼎杯 2020 青龙组]AreUSerialz
+
